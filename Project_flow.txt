@@ -35,7 +35,45 @@ wheel      0.45.1
     iii.  Langchain --> Framework
     iv.  RAG   --> (Retrieval-Augmented Generation)
 
-6.  
+6.  Min Req:
+
+    i. LLM model [grok(free), OpenAI, gemini, claude, olama(local setup), huggingface(free)] **
+    ii. Embedding model[openAI, huggingface, gemini]
+    iii. Vector Database: 
+        -   In-memory vector Database Eg: ** (FAISS)
+        -   On Disc vector Database   Eg: **
+        -   Cloud based vector Database  Eg: ** ( AWS bedrock)
+    
+    Using these 3 we will create the RAG Pipeline.
+
+7. setup.py
+    find_packages() will check each and every folder, and inside which even folder it will find __init__.py, it will include that folder inside DOCUMENT_PORTAL Package. I want to install
+    DOCUMENT_PORTAL as a package inside my current virtual env.
+    pip install -e .
+
+8. LangChain package
+    Langgraph package
+    using setup_tool we can convret a project into a package
+
+9. pip install -r requirement.txt
+
+10. groq_api_key and google_api_key
+
+
+
+
+
+20th July agenda:
+
+1. Dive into the RAG architecture and key components
+2. Recap the project use case to ensure clarity
+3. hand on implementation of the RAG workflow
+4. configure logging and exception handling module
+5. config and utils
+
+
+
+    
 
 
 
