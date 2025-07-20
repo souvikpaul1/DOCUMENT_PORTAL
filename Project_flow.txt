@@ -9,6 +9,55 @@ pip        25.1
 setuptools 78.1.1
 wheel      0.45.1
 
-3. add env in gitignore and initialize git
+    add env in gitignore and initialize git
+
+3.  git commit --> publish branch 
+
+4.   Problem Statement (Document Portal)
+	    -   Deployment of RAG based application
+	    -	RAG Architecture
+	    -	Development --> Deployment to AWS Bedrock
+
+    Either a RAG architecture or agents Architecture
+
+    Document Portal and intelligent chat:
+	- Analyse any document
+	- Compare 2 document
+	- Talk with single document
+	- Talk with multiple document
+
+5.  Tools and framework(tech stack):
+
+    Pre-requisite study:
+
+    i.  GenAI-LLM fundamental
+    ii.  LLM fine tuning
+    iii.  Langchain --> Framework
+    iv.  RAG   --> (Retrieval-Augmented Generation)
+
+6.  
 
 
+
+#############################################
+Crash course:
+
+1. RAG (Retrieval-Augmented Generation)
+        -   Not a framework, but a technique or architecture.
+        -   What it is: A method that combines traditional retrieval (like searching a knowledge base) with a language model (like GPT).
+        -   Goal: Help the model answer questions using external documents, so it doesn't rely only on what it was trained on.
+        -   Common use: Chatbots, document Q&A, customer support, etc.
+
+You can build RAG systems using various tools/frameworks — including LangChain, LlamaIndex, Haystack, etc.
+
+2.  LangChain
+        -   it's a framework (Python & JavaScript).
+        -   What it is: A high-level framework that helps you build applications with LLMs.
+        -   Supports: Building RAG systems, agents, chains, tool use, memory, etc.
+
+    Plug-and-play with:
+        -   Vector stores (e.g., Pinecone, FAISS)
+        -   Embedding models
+        -   Language models (e.g., OpenAI, Anthropic, Cohere)
+
+#############################################
