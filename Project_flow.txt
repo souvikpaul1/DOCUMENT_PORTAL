@@ -1,0 +1,14 @@
+1. create virtual env:
+conda activate document_portal_llmops1
+
+2. pip list 
+
+Package    Version
+---------- -------
+pip        25.1
+setuptools 78.1.1
+wheel      0.45.1
+
+3. add env in gitignore and initialize git
+
+
