@@ -1,5 +1,6 @@
 1. create virtual env:
 conda activate document_portal_llmops1
+conda activate D:\LLMOPS\DOCUMENT_PORTAL\document_portal_llmops
 
 2. pip list 
 
@@ -72,13 +73,59 @@ wheel      0.45.1
 5. config and utils
 
 
+11. https://python.langchain.com/docs/introduction/ (V0.3)
+
+12. Leader board:
+https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard
+
+13. LCEL - Lanchain Expression Language
+     rag_chain = (
+    {"context": retriever | format_docs, "question": RunnablePassthrough()}
+    | prompt
+    | model
+    | StrOutputParser()
+)
+Concept:
+
+a.  Question at Runtime
+        rag_chain.invoke("What is a data lake?")
+The RunnablePassthrough() ensures that the exact question is preserved and passed down the chain.
+
+b.  Vector DB Retrieval
+        The question is sent to the retriever, which sits on top of a vector database (like FAISS, Pinecone, Chroma, etc.).
+
+        The retriever does:
+            -   Embedding the input question.
+            -   Finding top-k similar document chunks based on vector similarity.
+
+c.  format_docs:
+        Likely flattens and formats the retrieved documents, e.g., joins text with separators.
+
+d.  Prompt Template for Prompt
+        Question
+        context
+
+e.   LLM Call
+        The formatted prompt is sent to the model (LLM like GPT-4, Claude, etc.).
+
+        The LLM uses:
+            The retrieved context if it's relevant.
+            Its pretrained knowledge if the context is missing or vague — depending on how the prompt is phrased.
+
+f.  Output Parsing
+        StrOutputParser() takes the raw LLM response (which might be a message object) and returns a plain string.
+        This is the final answer you receive.
+
+
 
     
 
 
 
-#############################################
+#####################################################################################################################
 Crash course:
+
+Retrieval-Augmented Generation (RAG) as a formal architecture was introduced by Facebook AI (now Meta AI) in a 2020 research paper
 
 1. RAG (Retrieval-Augmented Generation)
         -   Not a framework, but a technique or architecture.
@@ -98,4 +145,84 @@ You can build RAG systems using various tools/frameworks — including LangChain
         -   Embedding models
         -   Language models (e.g., OpenAI, Anthropic, Cohere)
 
-#############################################
+#####################################################################################################################
+
+Example of a RAG application:
+
+Suppose you have a policy document stored using embeddings.
+
+User asks:
+    -   What’s our refund policy if a customer cancels after 30 days?
+
+Workflow:
+    Embedding model:
+    -   Converts question → vector
+    -   Finds chunk from document:
+    -   "Customers are eligible for partial refunds if the cancellation occurs between 30 and 60 days."
+
+    LLM:
+    -   Reads the chunk.
+    -   Understands the context.
+
+Generates:
+    -   “If a customer cancels after 30 days but before 60, they may receive a partial refund as per company policy.”
+    -   The LLM understands "after 30 days" maps to "between 30 and 60", and turns it into a helpful sentence.
+
+########################################################################################################################
+
+How Langchain helps in RAG application:
+
+1. Document Loading & Preprocessing
+    LangChain provides built-in tools to:
+        -   Read from PDFs, websites, databases, s3, etc.
+        -   Split documents into chunks (e.g., 500 tokens with overlap).
+        -   Preprocess and clean text before embedding.
+
+✅ Saves you time from writing custom loaders and chunkers.
+
+🧠 2. Embeddings + Vector Stores
+    LangChain integrates with:
+        -   Embedding models: OpenAI, Google, Cohere, HuggingFace, etc.
+        -   Vector DBs: FAISS, Pinecone, Chroma, Weaviate, etc.
+
+
+🔍 3. Retrieval Chain
+    LangChain makes it easy to:
+        -   Embed the user query
+        -   Fetch relevant chunks from the vector DB
+        -   Feed them into a prompt template for the LLM
+
+
+💬 4. Prompt Templates & Memory
+    LangChain supports:
+        -   Prompt engineering (system + user instructions)
+        -   Chat history memory for conversation continuity
+        -   Dynamic prompt construction based on input + retrieved docs
+
+✅ Keeps prompts structured and extensible.
+
+⚙️ 5. Tool & Agent Support (Advanced)
+    For more advanced use cases, LangChain can:
+
+        -   Add agents that decide what tools (search, calculator, database) to use.
+        -   Integrate multiple steps like search → read → summarize → reply.
+
+🧱 Summary of LangChain’s Role in RAG
+
+📄 Document Ingestion	---->       Load, split, clean, store
+🔡 Embedding	        ---->       Plug into any embedding model
+🧠 Retrieval	        ---->       Query vector DBs easily
+💬 Generation	        ---->       Format and run prompts with LLMs
+🧠 Agents (optional)	---->       Add reasoning or tool-using chains
+
+LangChain helps you stitch together the RAG pipeline end-to-end, making it easy to connect [documents], [embeddings], [vector stores], and [LLMs] into a [working app] — without having to write all the glue code yourself. Think of it as the “middleware” for modern AI apps.
+
+########################################################################################################################
+
+
+
+
+
+
+
+Ask ChatGPT
