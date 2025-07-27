@@ -60,17 +60,17 @@ wheel      0.45.1
 
 10. groq_api_key and google_api_key
 
+11. Logging Module:
+    -   structlog
+    -   log guru
+    -   logging 
+
+12. Setup logging and exception module
 
 
 
 
-20th July agenda:
-
-1. Dive into the RAG architecture and key components
-2. Recap the project use case to ensure clarity
-3. hand on implementation of the RAG workflow
-4. configure logging and exception handling module
-5. config and utils
+---------------------------------------------------------------------------------------
 
 
 11. https://python.langchain.com/docs/introduction/ (V0.3)

@@ -1,3 +1,7 @@
 document_portal_llmops
 .env
 document_portal.egg-info
+
+logs
+notebook
+
