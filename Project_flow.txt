@@ -67,6 +67,9 @@ wheel      0.45.1
 
 12. Setup logging and exception module
 
+custom_logger.py (old: development format of logger)
+custom_logger.py( the way logs should be generated for cloud configuration)
+
 
 
 
