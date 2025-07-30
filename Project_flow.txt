@@ -70,7 +70,15 @@ wheel      0.45.1
 custom_logger.py (old: development format of logger)
 custom_logger.py( the way logs should be generated for cloud configuration)
 
+13. We place new PDF under data/document_analysis/ post execution file will be copied to <session_uuid> folder.
+        -   if we dont do this it will create data redundancy in vector DB.
+        -   Never delete the data, we should do data archive
 
+S3:
+    hot storage
+    cold storage --> archival pdfs --> analysis using Athena/glue/redshift 
+    warm storage
+    archival data 
 
 
 ---------------------------------------------------------------------------------------
