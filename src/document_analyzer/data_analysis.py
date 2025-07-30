@@ -25,7 +25,7 @@ class DocumentAnalyzer:
             
             self.prompt = prompt
             
-            self.log.info("DocumentAnalyzer initialized successfully")
+            self.log.info("Document Analyzer initialized successfully")
             
             
         except Exception as e:

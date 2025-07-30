@@ -80,6 +80,10 @@ S3:
     warm storage
     archival data 
 
+14. Project Flow:
+
+# Data ingestion: PDF repo --> load the PDF --> Save files in session folder(archival) <def save_pdf()> and load document < read_pdf() > load the content of PDF.
+# Context of PDF File --> Analysis using LLM capability --> <Prompt and Pydantic data validation> --> Create a chain --> Desired output
 
 ---------------------------------------------------------------------------------------
 
