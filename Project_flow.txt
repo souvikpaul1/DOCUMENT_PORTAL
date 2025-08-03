@@ -88,12 +88,12 @@ S3:
 ---------------------------------------------------------------------------------------
 
 
-11. https://python.langchain.com/docs/introduction/ (V0.3)
+15. https://python.langchain.com/docs/introduction/ (V0.3)
 
 12. Leader board:
 https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard
 
-13. LCEL - Lanchain Expression Language
+16. LCEL - Lanchain Expression Language
      rag_chain = (
     {"context": retriever | format_docs, "question": RunnablePassthrough()}
     | prompt
@@ -130,6 +130,24 @@ e.   LLM Call
 f.  Output Parsing
         StrOutputParser() takes the raw LLM response (which might be a message object) and returns a plain string.
         This is the final answer you receive.
+
+17. Document Compare:
+
+Compare between 2 document content
+
+Doc 1: 4 lines (V1)
+Doc 2:
+
+Doc 1: 4 lines + 2 lines (V2)
+
+Compare between Doc 1(V1) vs Doc 1(V2)
+
+Doc 1: OPen AI pdf
+Doc 2: Llama pdf
+
+Comparison between Doc 1 vs Doc 2
+
+
 
 
 
