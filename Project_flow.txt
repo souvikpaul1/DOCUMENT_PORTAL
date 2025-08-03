@@ -147,6 +147,12 @@ Doc 2: Llama pdf
 
 Comparison between Doc 1 vs Doc 2
 
+Data_ingestion.py --> Read PDF and return combine txt.
+Document_compare.py --> 
+
+embedding not required
+
+PDF --> text --> combine txt --> LLM --> output parser
 
 
 

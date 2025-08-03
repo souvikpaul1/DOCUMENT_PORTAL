@@ -23,7 +23,7 @@ class DocumentComparatorLLM:
 
     def compare_documents(self,combined_docs: str) -> pd.DataFrame:
         """
-        Compares two documents and returns a structured comparison.
+        Compares two documents and returns a structured comparison. 
         """
         try:
             inputs = {

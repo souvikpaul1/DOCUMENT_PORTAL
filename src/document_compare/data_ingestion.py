@@ -28,6 +28,8 @@ class DocumentIngestion:
     def save_uploaded_files(self,reference_file, actual_file):
         """
         Saves uploaded files to a specific directory.
+        reference_file - Version 2
+        actual_file - Version 1
         """
         try:
             self.delete_existing_files()
