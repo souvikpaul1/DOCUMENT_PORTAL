@@ -154,6 +154,29 @@ embedding not required
 
 PDF --> text --> combine txt --> LLM --> output parser
 
+18. 3rd August
+single document chat --> RAG
+multi document chat --> multiple PDFs
+
+Evaluation
+Memory
+Cache 
+Gaurdrails
+
+19. pymupdf vs fitz vs pypdfreader
+
+##To be discussed:
+- pydantic object and output parser
+- history or memory
+- Cache
+- token counter (cost analysis)
+- pytest
+- Evaluation
+- gaurdrails
+
+The FAISS index will be created only once
+
+
 
 
 
