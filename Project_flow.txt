@@ -174,7 +174,31 @@ Gaurdrails
 - Evaluation
 - gaurdrails
 
-The FAISS index will be created only once
+The FAISS index will be created only once.
+
+20. Multi-document chat with RAG pipeline:
+
+<.pdf, .txt, .docx> --> chunks(semantic chunking/recursive character splitter) --> embedding(small/medium/large dimension) --> vector DB (FAISS/pinecone/chromaDB) in the form of document object.
+Document object --> page content and metadata.
+
+Query --> retrieve relevant data from vectorDB stored as index. We have have 1 index or multiple index
+index will have document object --> page content and metadata.
+
+Vector operation(similarity search) between 2 vectors (cosine similarity, dot product, jaccard similarity, L1 and L2 distances)
+
+Advance retriever technique:
+1. MMR - Maximum Marginal relevance
+2. Rag fusion
+3. HYDE
+4. Contextual compression retrieval
+
+<Relevant Data, query, prompt> --> LLM --> output 
+
+Advance:
+1. from which document is the answer fetching from ?
+2. 
+
+
 
 
 

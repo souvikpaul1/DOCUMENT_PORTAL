@@ -9,6 +9,8 @@ faiss-cpu
 structlog
 PyMuPDF
 langchain-core langchain
+streamlit
+doc2txt
 
 
 
