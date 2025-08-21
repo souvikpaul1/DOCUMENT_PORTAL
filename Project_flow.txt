@@ -201,6 +201,16 @@ Advance:
 
 uvicorn main:app --reload
 
+21. Preparation for Deployment
+- Dev Branch(enhancements) and Main Branch (Deploy to AWS)
+- AWS configuration
+- S3| ECR| Fargate| DynamoDB| AWS Secret Manager| Aws CW | CLoud Formation
+- MMR, Advance Retrieving Technique, Cache Memory, test Cases
+
+By Default the llm_rpovider is groq to change to google we need to set:
+set LLM_PROVIDER = 'google'
+
+
 
 
 
