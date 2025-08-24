@@ -5,12 +5,9 @@ name: CI/CD to ECS Fargate
 #     workflows: ["Run Unit Tests"]   # Match the name in your ci.yaml
 #     types:
 #       - completed
-
 on:
   push:
     branches: [master]
-
-
 
 env:
   AWS_REGION: us-east-1
