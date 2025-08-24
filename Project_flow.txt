@@ -250,6 +250,19 @@ CD -->
 Unit Test Cases
 Integration Test Case
 
+Assignment:
+1. Write 10 unit test cases inside the test folder --> Assignment 1
+2. After pushing the code to github we are running the testcases.   --> Done
+3. Before pushing the code to github we must do the testcases( pre-commit test cases) --> Assignment 2
+
+AWS:
+1. ECR
+2. IAM user
+3. ECS
+4. AWS Secret
+5. Fargate
+6.  
+
 
 
 
