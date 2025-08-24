@@ -173,6 +173,7 @@ Gaurdrails
 - pytest
 - Evaluation
 - gaurdrails
+- Advance RAG
 
 The FAISS index will be created only once.
 
@@ -263,9 +264,12 @@ AWS:
 5. Fargate
 6.  
 
-push on github
+[Local --> gthub actions --> ECR --> ECS-Fargate]
 
 
+ECS:
+Create Cluster
+document-portal-cluster
 
 
 
