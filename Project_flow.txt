@@ -211,6 +211,46 @@ By Default the llm_rpovider is groq to change to google we need to set:
 set LLM_PROVIDER = 'google'
 
 
+Deployment:
+
+ECS Launch Type:
+1. Fargate --> AWS Managed
+2. EC2  --> User Managed
+
+## Workflow:
+
+1. Push to git hub main branch
+2. Trigger Github actions(aws.yaml)
+3. Build Docker image
+4. Push to Amazon ECR
+5. Task definition JSON inject new image
+6. ECS service updated
+7. App running on Fargate
+
+## Infra setup on cloud:
+
+1. ECR Repo VPC(with 2 public subnets)
+2. Internet Gateway
+3. ECS Cluster
+4. Task definition
+5. ECS Service( no load Balancer)
+6. IAM Role
+7. Security Group
+
+[CI ---> CD ---> CD]
+
+CI --> Updating code base, running unit test case, github actions/jenkins --> CI.yaml
+CD --> Docker image
+        - ECR
+        - Dockerhub
+CD --> 
+    Docker on EC2(Server)
+    ECS + Fargate (Serverless)
+
+Unit Test Cases
+Integration Test Case
+
+
 
 
 
