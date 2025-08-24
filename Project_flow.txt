@@ -263,6 +263,8 @@ AWS:
 5. Fargate
 6.  
 
+push on github
+
 
 
 
